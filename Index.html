@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Directory | API Data Display</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-users"></i>
+                <span>UserDirectory</span>
+            </div>
+            <h1>Meet Our Users</h1>
+            <p class="description">Discover our community members with data fetched in real-time from JSONPlaceholder API</p>
+            
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-value" id="totalUsers">10</div>
+                    <div class="stat-label">Total Users</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">5</div>
+                    <div class="stat-label">Cities</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">8</div>
+                    <div class="stat-label">Companies</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="controls">
+            <button id="reloadBtn">
+                <i class="fas fa-sync-alt"></i>
+                Reload Users
+            </button>
+            <button id="filterBtn">
+                <i class="fas fa-filter"></i>
+                Filter
+            </button>
+        </div>
+        
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Fetching user data from API...</p>
+        </div>
+        
+        <div id="error" class="error" style="display: none;"></div>
+        
+        <div id="usersContainer" class="users-grid">
+            <!-- User cards will be inserted here by JavaScript -->
+        </div>
+        
+        <footer>
+            <p>Data provided by <a href="https://jsonplaceholder.typicode.com/" target="_blank">JSONPlaceholder</a> | Designed with <i class="fas fa-heart" style="color: #fd79a8;"></i> for API Integration</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
